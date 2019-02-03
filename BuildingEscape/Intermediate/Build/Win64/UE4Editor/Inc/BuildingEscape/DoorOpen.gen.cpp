@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeDoorOpen() {}
 	BUILDINGESCAPE_API UClass* Z_Construct_UClass_UDoorOpen();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_BuildingEscape();
+	ENGINE_API UClass* Z_Construct_UClass_ATriggerVolume_NoRegister();
 // End Cross Module References
 	void UDoorOpen::StaticRegisterNativesUDoorOpen()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeDoorOpen() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PressurePlate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PressurePlate;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodeDoorOpen() {}
 		{ "ModuleRelativePath", "DoorOpen.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDoorOpen_Statics::NewProp_PressurePlate_MetaData[] = {
+		{ "Category", "DoorOpen" },
+		{ "ModuleRelativePath", "DoorOpen.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDoorOpen_Statics::NewProp_PressurePlate = { UE4CodeGen_Private::EPropertyClass::Object, "PressurePlate", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000001, 1, nullptr, STRUCT_OFFSET(UDoorOpen, PressurePlate), Z_Construct_UClass_ATriggerVolume_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UDoorOpen_Statics::NewProp_PressurePlate_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDoorOpen_Statics::NewProp_PressurePlate_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDoorOpen_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDoorOpen_Statics::NewProp_PressurePlate,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UDoorOpen_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UDoorOpen>::IsAbstract,
 	};
@@ -54,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeDoorOpen() {}
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x00B000A4u,
 		nullptr, 0,
-		nullptr, 0,
+		Z_Construct_UClass_UDoorOpen_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_UDoorOpen_Statics::PropPointers),
 		"Engine",
 		&StaticCppClassTypeInfo,
 		nullptr, 0,
@@ -69,7 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeDoorOpen() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UDoorOpen, 845070328);
+	IMPLEMENT_CLASS(UDoorOpen, 657974895);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UDoorOpen(Z_Construct_UClass_UDoorOpen, &UDoorOpen::StaticClass, TEXT("/Script/BuildingEscape"), TEXT("UDoorOpen"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UDoorOpen);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
